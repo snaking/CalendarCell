@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="400" id="sBV-sh-IF7" customClass="CalendarCell" customModule="CalendarCell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="442" height="304"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sBV-sh-IF7" id="rZl-Sg-p5z">
+                <rect key="frame" x="0.0" y="0.0" width="442" height="303.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vXz-2d-oxj" customClass="FSCalendar">
+                        <rect key="frame" x="20" y="11" width="402" height="234.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderDefaultColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderSelectionColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoP-Wo-V99">
+                        <rect key="frame" x="10" y="248.5" width="422" height="55"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="55" id="14T-LX-yuM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="FoP-Wo-V99" firstAttribute="top" secondItem="vXz-2d-oxj" secondAttribute="bottom" constant="3" id="46l-Hf-aSz"/>
+                    <constraint firstItem="vXz-2d-oxj" firstAttribute="top" secondItem="rZl-Sg-p5z" secondAttribute="topMargin" id="5BE-Sv-Gh7"/>
+                    <constraint firstAttribute="bottom" secondItem="FoP-Wo-V99" secondAttribute="bottom" id="Ema-Wn-kkZ"/>
+                    <constraint firstItem="vXz-2d-oxj" firstAttribute="leading" secondItem="rZl-Sg-p5z" secondAttribute="leadingMargin" id="FEH-7P-c4I"/>
+                    <constraint firstItem="vXz-2d-oxj" firstAttribute="trailing" secondItem="rZl-Sg-p5z" secondAttribute="trailingMargin" id="X5w-G9-cQn"/>
+                    <constraint firstAttribute="trailing" secondItem="FoP-Wo-V99" secondAttribute="trailing" constant="10" id="l9F-qc-aCW"/>
+                    <constraint firstItem="FoP-Wo-V99" firstAttribute="leading" secondItem="rZl-Sg-p5z" secondAttribute="leading" constant="10" id="yhQ-4Y-FaZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="calendar" destination="vXz-2d-oxj" id="1cD-PQ-Umf"/>
+                <outlet property="lblSelectedDates" destination="FoP-Wo-V99" id="7P4-va-K2V"/>
+            </connections>
+            <point key="canvasLocation" x="192" y="209.59520239880061"/>
+        </tableViewCell>
+    </objects>
+</document>
