@@ -30,9 +30,7 @@ public class CalendarCell: Cell<Set<Date>>, CellType,FSCalendarDelegate,FSCalend
         super.setup()
         selectionStyle = .none
         calendar.allowsMultipleSelection = true
-        
-calendar.clipsToBounds = true
-        
+        calendar.clipsToBounds = true
         calendar.delegate = self
     }
     
@@ -53,7 +51,7 @@ calendar.clipsToBounds = true
             st = "\(st)\(self.dateFormatter.string(from: date)), "
         }
         
-        lblSelectedDates.text = "Seçili Tarihler : " + st
+        lblSelectedDates.text = "Selected dates : " + st
     }
 }
 
